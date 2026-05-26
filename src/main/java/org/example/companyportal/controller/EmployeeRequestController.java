@@ -18,6 +18,11 @@ public class EmployeeRequestController {
         this.employeeRequestService = employeeRequestService;
     }
 
+    @GetMapping("/requests/ping")
+    public String ping() {
+        return "requests controller is working";
+    }
+
     @PostMapping("/requests")
     public EmployeeRequest createRequest(
             @RequestBody CreateEmployeeRequest request,
